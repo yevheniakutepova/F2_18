@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dodaj książkę</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1> Dodaj książkę</h1>
+
+  <form method="POST">
+    <input type="text" name="title" placeholder="Tytuł" required>
+    <input type="text" name="author" placeholder="Autor" required>
+    <textarea name="description" placeholder="Opis"></textarea>
+
+    <select name="status">
+      <option value="nieprzeczytana">Nieprzeczytana</option>
+      <option value="w trakcie">W trakcie</option>
+      <option value="przeczytana">Przeczytana</option>
+    </select>
+
+    <button type="submit">Dodaj</button>
+  </form>
+
+  <a href="/"> Powrót</a>
+</div>
+
+</body>
+</html>

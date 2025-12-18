@@ -1,0 +1,60 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 800px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+h1 {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #e828c1;
+  margin-right: 10px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+input, textarea, select, button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 8px;
+  margin-bottom: 15px;
+}
+
+button {
+  background-color: #e52cb1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+
+}
+
+.book {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.book-actions {
+  margin-top: 5px;
+}
+
+.inline-form {
+  display: inline;
+}

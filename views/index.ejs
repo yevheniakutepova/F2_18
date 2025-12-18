@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Biblioteka</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1> Moja biblioteka</h1>
+  <a href="/logout"> Wyloguj</a>
+
+  <a href="/add"> Dodaj książkę</a>
+
+  <form method="GET">
+    <select name="status">
+      <option value="">Wszystkie statusy</option>
+      <option value="nieprzeczytana">Nieprzeczytana</option>
+      <option value="w trakcie">W trakcie</option>
+      <option value="przeczytana">Przeczytana</option>
+    </select>
+
+    <select name="sort">
+      <option value="">Brak sortowania</option>
+      <option value="title">Tytuł</option>
+      <option value="date">Data dodania</option>
+    </select>
+
+    <button type="submit">Zastosuj</button>
+  </form>
+
+  <% books.forEach(book => { %>
+    <div class="book">
+      <strong><%= book.title %></strong> – <%= book.author %><br>
+      Status: <%= book.status %>
+
+      <div class="book-actions">
+        <a href="/details/<%= book._id %>">Szczegóły</a>
+        <a href="/edit/<%= book._id %>">Edytuj</a>
+
+        <form action="/delete/<%= book._id %>" method="POST" class="inline-form">
+          <button type="submit">Usuń</button>
+        </form>
+      </div>
+    </div>
+  <% }) %>
+</div>
+
+</body>
+</html>

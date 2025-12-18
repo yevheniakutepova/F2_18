@@ -1,0 +1,28 @@
+Instrukcja uruchomienia bazy danych MongoDB (Docker)
+
+Wymagania:
+Zainstalowany Docker
+
+Uruchom Docker Desktop.
+
+Otwórz terminal (PowerShell) i przejdź do katalogu projektu.
+
+Uruchom MongoDB poleceniem:
+
+docker run -d --name mongodb -p 27017:27017 -v mongodb_data:/data/db mongo:7.0
+
+Baza danych działa na porcie 27017 i jest dostępna pod adresem:
+
+mongodb://localhost:27017/biblioteka
+
+Uruchom aplikację:
+
+npm install
+npm start
+
+Otwórz w przeglądarce:
+
+http://localhost:3644
+
+Aby zatrzymać bazę danych, użyj polecenia:
+docker-compose down
